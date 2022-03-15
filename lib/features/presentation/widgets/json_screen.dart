@@ -47,9 +47,9 @@ class _JsonScreenState extends State<JsonScreen> {
       );
   }
 
-    Future<List<ModelData>>readJson()async{
+   Future<List<ModelData>>readJson()async{
    final jsonData=await rootBundle.rootBundle.loadString('jsons/json_data_model');
-   final jsonList=  json.decode(jsonData) as List<dynamic>;
+   final jsonList= json.decode(jsonData) as List<dynamic>;
    return jsonList.map((e) => ModelData.fromJson(e)).toList();
   }
 }
