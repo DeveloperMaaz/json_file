@@ -11,7 +11,7 @@ class ShowDataBack extends StatefulWidget {
 
 class _ShowDataBackState extends State<ShowDataBack> {
   Welcome? data = Welcome();
-  String previousData = ' ';
+  String previousData = ' No Data Yet!';
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _ShowDataBackState extends State<ShowDataBack> {
                       style: TextStyle(color: Colors.black),
                     ),
                     const SizedBox(width: 10.0),
-                    Text(data!.name.toString()),
+                    Text(data != null?'No Data yet!' : data!.name.toString()),
                   ],
                 ),
               ),
