@@ -51,19 +51,18 @@ class _ShowDataBackState extends State<ShowDataBack> {
                       style: TextStyle(color: Colors.black),
                     ),
                     const SizedBox(width: 10.0),
-                    Text(data != null?'No Data yet!' : data!.name.toString()),
+                    Text(data!.name.toString()),
                   ],
                 ),
               ),
               ElevatedButton(
                   onPressed: () async {
-                    previousData = data!.name.toString();
 
+                    previousData = data!.name.toString();
                     data = await Navigator.push<Welcome>(
                       context,
                       MaterialPageRoute(builder: (ctx) => const JsonScreen()),
                     );
-
                     setState(() {});
 
                     // print(data!.name);
